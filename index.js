@@ -16,7 +16,7 @@ function currentLine(line){
   let whozup = " empty."
   let names = ":";
   for(let i=0; i<line.length; i++) {
-    names = names + ` ${[i]+1}. ${line[i]}${i<line.length-1 ? "," : ""}`;
+    names = names + ` ${i+1}. ${line[i]}${i<line.length-1 ? "," : ""}`;
     if(i===line.length-1){
       whozup = names;
     }
