@@ -11,3 +11,12 @@ function nowServing(line) {
   }
   return next;
 }
+
+function currentLine(line){
+  let whozup = " empty."
+  let names = ":";
+  for(let i=0); i<line.length; i++) {
+    names = names + ` ${[i]}. ${line[i]}${i<line.length ? "," : ""}`;
+  }
+  return `The line is currently${whozup}`;
+}
