@@ -16,7 +16,10 @@ function currentLine(line){
   let whozup = " empty."
   let names = ":";
   for(let i=0; i<line.length; i++) {
-    names = names + ` ${[i]}. ${line[i]}${i<line.length ? "," : ""}`;
+    names = names + ` ${[i]}. ${line[i]}${i<line.length-1 ? "," : ""}`;
+    if(i===line.length-1){
+      whozup = names;
+    }
   }
   return `The line is currently${whozup}`;
 }
